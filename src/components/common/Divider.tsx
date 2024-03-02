@@ -14,13 +14,12 @@ function Divider({color} : Props) {
       const dividerTl = gsap.timeline({
         scrollTrigger: {
           trigger: dividerRef.current,
-          start: 'top bottom',
-          end: 'top top',
+          start: 'bottom bottom',
+          end: 'bottom top',
           scrub: .1,
-          markers: true
         }
       });
-      dividerTl.to(dividerRef.current,{
+      dividerTl.from(dividerRef.current,{
         rotate: 5,
         ease: 'ease-in'
       })
@@ -28,7 +27,7 @@ function Divider({color} : Props) {
    
 
   return (
-   <div ref = {dividerRef} className={color + " w-[calc(100vw+200px)] h-[200px] absolute bottom-[-100px] z-0"}>
+   <div ref = {dividerRef} className={color + " w-[calc(100vw+100px)] left-0 h-[200px] absolute bottom-[-100px] z-0"}>
    </div>
   );
 }

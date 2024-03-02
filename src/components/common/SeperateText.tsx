@@ -10,13 +10,16 @@ function SeperateText({text} : Props) {
   return (
     <>
         {stringArray.map((elm, index) => (
-           elm!= " "? 
-           <span key={index} className="inline-block">
-                {elm}
-                
+           elm !== " "? 
+           <span key={index} className="inline-block letter">
+            <span className="letter__inner overflow-hidden">
+              {elm}
+            </span>
             </span> : 
-         <span key={index} className="block">
-         {elm}    
+          <span key={index} className="block letter">
+          <span className="letter__inner">
+          {elm}  
+          </span>
         </span> 
         ))}
     </>
