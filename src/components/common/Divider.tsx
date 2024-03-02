@@ -27,7 +27,7 @@ function Divider({color} : Props) {
    
 
   return (
-   <div ref = {dividerRef} className={color + " w-[calc(100vw+100px)] left-0 h-[200px] absolute bottom-[-100px] z-0"}>
+   <div ref = {dividerRef} className={color + " w-[calc(100vw+100px)] left-0 pc:h-[200px] h-[100px]  absolute pc:bottom-[-100px] bottom-[-50px] z-0"}>
    </div>
   );
 }

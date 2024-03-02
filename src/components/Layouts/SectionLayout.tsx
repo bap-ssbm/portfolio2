@@ -29,11 +29,11 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     })
    
   return (
-    <div ref={sectionRef} className="mb-[100px]">
-      <div className={bgClass + ' min-h-screen relative ' + className} {...props}>
-       {children}
-       <Divider color={bgClass}/>
+    <div ref={sectionRef} className="mb-[100px] relative ">
+      <div className={bgClass + ' min-h-screen relative pc:pb-[100px] pb-[50px] z-10 ' + className} {...props}>
+       {children}   
     </div>
+    <Divider color={bgClass}/>
     </div>
    
   );

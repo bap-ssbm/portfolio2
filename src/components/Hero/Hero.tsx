@@ -42,16 +42,16 @@ function Hero() {
     })
    
   return (
-    <SectionLayout bgClass='bg-neutral-700 ' ref={heroWrap} className='flex items-center justify-end' >
-        <div className='title text-slate-100 pr-7'>
+    <SectionLayout bgClass='bg-neutral-700' ref={heroWrap} className='flex items-center justify-center pt-20' >
+        <div className='title text-slate-100 pc:ml-10'>
             <div className='name '>
                 <h2 ref={nameEn} className='name1 pc:text-9xl text-5xl tracking-wider'>
                     <SeperateText text={texts.name}/>
                 </h2>
-                <h2 className='pc:mt-10 pc:text-4xl'>
+                <h2 className='pc:mt-10 mt-5 pc:text-4xl'>
                     <SeperateText text={texts.nameja}/>
                 </h2>
-                <p className=' pc:mt-20 pc:text-xl'>
+                <p className=' pc:mt-20 mt-7 pc:text-xl'>
                 {texts.title}
                 </p>
             </div>
