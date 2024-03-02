@@ -19,7 +19,7 @@ function Divider({color} : Props) {
           scrub: .1,
         }
       });
-      dividerTl.from(dividerRef.current,{
+      dividerTl.to(dividerRef.current,{
         rotate: 5,
         ease: 'ease-in'
       })
