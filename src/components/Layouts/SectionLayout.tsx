@@ -7,10 +7,11 @@ import { useRef } from 'react';
 
 interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     bgClass: string,
+    wave? : true,
     children: React.ReactNode;
 }
 
-function SectionLayout({children, bgClass, className, ref, ...props}: Props) {
+function SectionLayout({children, bgClass, wave, className, ref, ...props}: Props) {
 gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     const sectionRef = useRef<HTMLDivElement>(null);
     useGSAP(() => {
@@ -29,11 +30,12 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     })
    
   return (
-    <div ref={sectionRef} className="mb-[100px] relative ">
-      <div className={bgClass + ' min-h-screen relative pc:pb-[100px] pb-[50px] z-10 ' + className} {...props}>
-       {children}   
+    <div ref={sectionRef} className={bgClass + "mb-[100px] relative"}>
+      <div className={' min-h-screen relative z-20 ' + className} {...props}>
+       {children}
+       
     </div>
-    <Divider color={bgClass}/>
+    <Divider color={bgClass} wave={wave}/>
     </div>
    
   );

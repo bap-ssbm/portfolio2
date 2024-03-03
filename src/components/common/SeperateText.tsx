@@ -5,18 +5,17 @@ type Props = {
 function SeperateText({text} : Props) {
     
    const stringArray = text.split("");
-   console.log(stringArray)
 
   return (
     <>
         {stringArray.map((elm, index) => (
            elm !== " "? 
-           <span key={index} className="inline-block letter">
-            <span className="letter__inner overflow-hidden">
+           <span key={index} className="inline-block letter overflow-hidden">
+            <span className="letter__inner  inline-block">
               {elm}
             </span>
             </span> : 
-          <span key={index} className="block letter">
+          <span key={index} className="block letter overflow-hidden">
           <span className="letter__inner">
           {elm}  
           </span>
