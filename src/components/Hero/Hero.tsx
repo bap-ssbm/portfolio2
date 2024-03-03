@@ -53,10 +53,10 @@ function Hero() {
                 <h2 ref={nameEn} className='name1 pc:text-9xl text-5xl tracking-wider'>
                     <SeperateText text={texts.name}/>
                 </h2>
-                <h2 className='pc:mt-10 pc:text-4xl'>
+                <h2 className='pc:mt-10 pc:text-4xl mt-5 text-xp'>
                     <SeperateText text={texts.nameja}/>
                 </h2>
-                <p className=' pc:mt-20 pc:text-xl'>
+                <p className=' pc:mt-20 pc:text-xl mt-5 text-xp'>
                 {texts.title}
                 </p>
             </div>
