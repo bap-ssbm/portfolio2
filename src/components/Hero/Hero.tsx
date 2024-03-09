@@ -41,7 +41,7 @@ function Hero() {
                     const letterTl = gsap.timeline({
                         scrollTrigger: {
                             trigger: heroWrap.current,
-                            start: "top+=100 top",
+                            start: "top-=25 top",
                             end: "bottom top",
                             scrub: .3,
                         }
@@ -77,7 +77,7 @@ function Hero() {
                 <h2 className='pc:mt-2 pc:text-5xl mt-5 text-xl tracking-wider duration-500'>
                     <SeperateText text={texts.nameja}/>
                 </h2>
-                <p className='hero__ttl pc:mt-5 pc:text-xl mt-5 text-xp'>
+                <p className='hero__ttl pc:mt-5 pc:text-xl tracking-wider  mt-5 text-xp'>
                 <SeperateText text={texts.title}/>
                 </p>
             </div>
