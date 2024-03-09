@@ -1,18 +1,14 @@
-import React, { useLayoutEffect, useRef } from 'react';
 import './App.scss';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
 import Hero from './components/Hero/Hero';
+import About from './components/About/About';
 
 
 function App() {
 
-  
-
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden wrapper'>
       <Hero/>
+      <About/>
 
       <div className='h-dvh'>
 

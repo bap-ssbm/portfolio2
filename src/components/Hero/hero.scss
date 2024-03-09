@@ -1,3 +1,47 @@
 .hero {
+    position: relative;
     
+     &:before {
+        width: 100vw;
+        background-color: #000;
+        height: 35%;
+        content: '';
+        position: absolute;
+        z-index: 1000;
+        opacity: 30%;
+        transform-origin: left top;
+        transform: scale(0);
+        left: 0;
+        top: 0;
+        transition: 3s ease;
+    }
+
+    &:after {
+        background-color: #000;
+        transform-origin: right;
+        transform: scale(0);
+        content: '';
+        height: 1px;
+        width: 100vw;
+        position: absolute;
+        bottom: 20%;
+        transition: 3s ease;
+    }
+
+    &__ttl {
+        transition: 3s ease;
+        opacity: 0;
+    }
+
+    &.is-animate {
+        &:before, &:after {
+            transform: scale(1);
+        }
+
+        .hero {
+            &__ttl {
+                opacity: 1;
+            }
+        }
+    }
 }

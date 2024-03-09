@@ -3,25 +3,35 @@ type Props = {
 }
 
 function SeperateText({text} : Props) {
-    
-   const stringArray = text.split("");
+    const stringArr = text.split("<br>");
+    const newStringArr : string[][] = [];
+    stringArr.forEach(elm => {
+      const letterArr = elm.split("");
+      newStringArr.push(letterArr);
+    })
 
   return (
-    <>
-        {stringArray.map((elm, index) => (
-           elm !== " "? 
-           <span key={index} className="inline-block letter overflow-hidden">
-            <span className="letter__inner  inline-block">
-              {elm}
-            </span>
-            </span> : 
-          <span key={index} className="block letter overflow-hidden">
-          <span className="letter__inner">
-          {elm}  
-          </span>
-        </span> 
-        ))}
-    </>
+    <div className="seperateText">
+        {newStringArr.map((elm, index) => (
+             <div key={index} className="seperateText__block">
+            {elm.map((letter, i) => (
+                    letter !== " "? 
+                    <span key={i} className="inline-block letter overflow-hidden">
+                     <span className="letter__inner  inline-block">
+                       {letter}
+                     </span>
+                     </span> : 
+                   <span key={i} className="letter overflow-hidden pc:inline-block">
+                   <span className="letter__inner">
+                       &nbsp;<br className="pc:hidden"/>
+                   </span>
+                 </span> 
+        
+           ))}
+           </div>
+          ))
+        }
+    </div>
   );
 }
 
