@@ -1,8 +1,9 @@
 type Props = {
-    text : string
+    text : string,
+    breakSP? : boolean
 }
 
-function SeperateText({text} : Props) {
+function SeperateText({text, breakSP} : Props) {
     const stringArr = text.split("<br>");
     const newStringArr : string[][] = [];
     stringArr.forEach(elm => {
@@ -23,7 +24,7 @@ function SeperateText({text} : Props) {
                      </span> : 
                    <span key={i} className="letter overflow-hidden pc:inline-block">
                    <span className="letter__inner">
-                       &nbsp;<br className="pc:hidden"/>
+                    {breakSP&&<br className="pc:hidden"/>}&nbsp;
                    </span>
                  </span> 
         

@@ -2,7 +2,6 @@ import Divider from "../common/Divider/Divider";
 import React from "react";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-
 import { useRef } from 'react';
 
 interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -31,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
    
   return (
     <div ref={sectionRef} className={bgClass + " relative"}>
-      <div className={' min-h-screen relative z-20 pc:mb-[50px] pb-[100px] ' + className} {...props}>
+      <div className={' pc:min-h-[800px] h-screen relative z-20 pc:mb-[50px] pb-[100px] ' + className} {...props}>
        {children}
        
     </div>

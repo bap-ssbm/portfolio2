@@ -68,11 +68,11 @@ function Hero() {
       });  
    
   return (
-    <SectionLayout bgClass='bg-white ' ref={heroWrap} className='flex hero relative justify-center pt-[10%]' >
-        <div className='title text-black text-center'>
-            <div className='name '>
+    <SectionLayout bgClass='bg-white ' ref={heroWrap} className='hero relative' >
+        <div className='title text-black text-center absolute top-[50%] left-0 w-full translate-y-[-50%]'>
+            <div className='name w-full'>
                 <h2 ref={nameEn} className='name1 text-center font-semibold pc:text-8xl text-5xl tracking-wider'>
-                    <SeperateText text={texts.name}/>
+                    <SeperateText breakSP={true} text={texts.name}/>
                 </h2>
                 <h2 className='pc:mt-10 pc:text-5xl mt-5 text-xl tracking-wider'>
                     <SeperateText text={texts.nameja}/>
