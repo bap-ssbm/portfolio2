@@ -5,7 +5,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import SeperateText from '../common/SeperateText';
 import SectionLayout from '../Layouts/SectionLayout';
-import './hero.scss'
+import './Hero.scss'
 
 const texts = {
     title: 'Front-end Developer',
