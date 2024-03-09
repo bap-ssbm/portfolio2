@@ -8,7 +8,7 @@ import SectionLayout from '../Layouts/SectionLayout';
 import './hero.scss'
 
 const texts = {
-    title: 'A Creative Front-end Web Developer',
+    title: 'Front-end Developer',
     name: 'KENTARO OSHIMOTO',
     nameja: '押本健太郎'
 }
@@ -68,7 +68,7 @@ function Hero() {
       });  
    
   return (
-    <SectionLayout bgClass='bg-white ' ref={heroWrap} className='flex hero relative items-center justify-center' >
+    <SectionLayout bgClass='bg-white ' ref={heroWrap} className='flex hero relative justify-center pt-[10%]' >
         <div className='title text-black text-center'>
             <div className='name '>
                 <h2 ref={nameEn} className='name1 text-center font-semibold pc:text-8xl text-5xl tracking-wider'>
@@ -77,9 +77,9 @@ function Hero() {
                 <h2 className='pc:mt-10 pc:text-5xl mt-5 text-xl tracking-wider'>
                     <SeperateText text={texts.nameja}/>
                 </h2>
-                {/* <p className='hero__ttl pc:mt-10 pc:text-xl mt-5 text-xp'>
-                    {texts.title}
-                </p> */}
+                <p className='hero__ttl pc:mt-10 pc:text-xl mt-5 text-xp'>
+                <SeperateText text={texts.title}/>
+                </p>
             </div>
         </div>
     </SectionLayout>
