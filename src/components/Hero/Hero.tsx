@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -60,16 +60,17 @@ function Hero() {
                 
             })    
         })
-        if(nameEn.current) {
-            
-        }
+        
     })
+    useEffect(()=> {
+        window.addEventListener('load', () => {
+            if(document.querySelector('.hero')) {
+              document.querySelector('.hero')?.classList.add('is-animate');
+            }
+          });  
+       
+    }, [])
 
-    window.addEventListener('load', () => {
-        if(document.querySelector('.hero')) {
-          document.querySelector('.hero')?.classList.add('is-animate');
-        }
-      });  
    
   return (
     <SectionLayout bgClass='bg-white ' ref={heroWrap} className='hero relative h-screen' >
