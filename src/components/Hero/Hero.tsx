@@ -74,10 +74,10 @@ function Hero() {
                 <h2 ref={nameEn} className='name1 text-center font-semibold pc:text-8xl text-5xl tracking-wider'>
                     <SeperateText breakSP={true} text={texts.name}/>
                 </h2>
-                <h2 className='pc:mt-10 pc:text-5xl mt-5 text-xl tracking-wider'>
+                <h2 className='pc:mt-2 pc:text-5xl mt-5 text-xl tracking-wider duration-500'>
                     <SeperateText text={texts.nameja}/>
                 </h2>
-                <p className='hero__ttl pc:mt-10 pc:text-xl mt-5 text-xp'>
+                <p className='hero__ttl pc:mt-5 pc:text-xl mt-5 text-xp'>
                 <SeperateText text={texts.title}/>
                 </p>
             </div>
