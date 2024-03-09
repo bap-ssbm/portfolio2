@@ -41,12 +41,16 @@ function Hero() {
                     const letterTl = gsap.timeline({
                         scrollTrigger: {
                             trigger: heroWrap.current,
-                            start: "top-=25 top",
+                            start: "top top",
                             end: "bottom top",
                             scrub: .3,
                         }
                       })
-                    letterTl.to(letter,{
+                    letterTl.fromTo(letter,{
+                        y: (-5 *  Math.abs( (numFromCenter % 3) ) ) - 5 ,
+                        rotate: 1.2 * numFromCenter,
+                        opacity: 1
+                    },{
                         y: (-200 *  Math.abs( (numFromCenter % 3) ) ) - 200 ,
                         rotate: 10 * numFromCenter,
                         opacity: 0,
