@@ -68,7 +68,7 @@ function Hero() {
       });  
    
   return (
-    <SectionLayout bgClass='bg-white ' ref={heroWrap} className='hero relative' >
+    <SectionLayout bgClass='bg-white ' ref={heroWrap} className='hero relative h-screen' >
         <div className='title text-black text-center absolute top-[50%] left-0 w-full translate-y-[-50%]'>
             <div className='name w-full'>
                 <h2 ref={nameEn} className='name1 text-center font-semibold pc:text-8xl text-5xl tracking-wider'>
@@ -81,6 +81,7 @@ function Hero() {
                 <SeperateText text={texts.title}/>
                 </p>
             </div>
+            <img  className='flowers pc:w-40 w-20 brightness-0 mx-auto mt-5' src='/flowers/wedding-flowers-design.svg' alt='flowers'/>
         </div>
     </SectionLayout>
   );

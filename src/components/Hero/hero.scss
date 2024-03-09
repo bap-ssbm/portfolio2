@@ -3,7 +3,7 @@
     
 
     &:after, &:before {
-        background-color: #000;
+        background-color: #000000;
  
         transform: scale(0);
         content: '';
@@ -36,9 +36,21 @@
                 opacity: 1;
             }
         }
+
+        .flowers {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 
     .title {
         mix-blend-mode: difference;
     }
+
+    .flowers {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 2s ease-in;
+    }
 }
+

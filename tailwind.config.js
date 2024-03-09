@@ -8,7 +8,7 @@ module.exports = {
       'sp': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'pc': '1024px',
+      'pc': '768px',
       // => @media (min-width: 1024px) { ... }
 
       'dt': '1280px',

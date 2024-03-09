@@ -7,7 +7,7 @@ import Header from './components/common/Header/Header';
 function App() {
 
   return (
-    <div className='overflow-x-hidden wrapper'>
+    <div className='overflow-x-hidden'>
       <Header/>
       <Hero/>
       <About/>
