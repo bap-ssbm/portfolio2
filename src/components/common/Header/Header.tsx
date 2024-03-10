@@ -27,9 +27,9 @@ function Header() {
 
 
   return (
-   <nav className='nav w-screen fixed left-0 top-0 z-50 pt-2 pl-3'>
-    <h1 className='nav__logo italic text-black flex gap-4 items-center'>
-    <img ref={flowerRef} style={{ transform: `rotate(${rotation}deg)` }} id='mainflower' className='flower w-10 brightness-0' src='/flowers/flower-with-6-petals.svg' alt='flower'/>
+   <nav className='nav w-screen fixed left-0 top-0 z-50 pc:h-[70px] h-[50px] pc:pl-5 pl-3'>
+    <h1 className='nav__logo italic text-black flex gap-4 items-center h-full'>
+    <img ref={flowerRef} style={{ transform: `rotate(${rotation}deg)` }} id='mainflower' className='flower pc:w-10 w-8 brightness-0' src='/flowers/flower-with-6-petals.svg' alt='flower'/>
         K.O
     </h1>
    </nav>

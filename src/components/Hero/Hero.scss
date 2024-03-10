@@ -13,12 +13,21 @@
         transition: 3s ease;
     }
     &:before {
-        top: 60px;
+        top: 50px;
+      
         transform-origin: left;
+
+        @media (min-width: 768px ) {
+            top: 70px;
+        }
     }
     &:after {
-        bottom: 60px;
+        bottom: 50px;
         transform-origin: right;
+
+        @media (min-width: 768px ) {
+            bottom: 70px;
+        }
     }
 
     &__ttl {
