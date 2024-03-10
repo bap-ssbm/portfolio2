@@ -60,7 +60,7 @@ function About() {
             <MaskText heading='America,' className='pc:text-8xl text-2xl font-semibold'/>
             <span className='opacity-40'> now living in </span>
             <MaskText heading='Tokyo, Japan.' className='pc:text-8xl text-2xl font-semibold'/><br/>
-            <span className='opacity-40'> Currently working as a</span>
+            <span className='opacity-40'> Currently working as a </span>
             <MaskText heading='Front-end Developer' className='pc:text-8xl text-2xl font-semibold'/> 
             <span className='opacity-40'> at a Japanese </span>
             <MaskText heading='startup company.' className='pc:text-8xl text-2xl font-semibold'/> 

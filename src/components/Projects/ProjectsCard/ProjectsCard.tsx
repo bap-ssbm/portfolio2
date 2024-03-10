@@ -9,13 +9,14 @@ import './ProjectsCard.scss';
 interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     imgUrl: string,
     alt: string,
+    link: string,
     wave? : true,
     children?: React.ReactNode;
 }
 
-function ProjectsCard({children, imgUrl, alt, className, ref, ...props}: Props) {
+function ProjectsCard({children, imgUrl, alt, link, className, ref, ...props}: Props) {
 gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
-    const cardRef = useRef<HTMLDivElement>(null);
+    const cardRef = useRef<HTMLAnchorElement>(null);
     const coverRef = useRef<HTMLDivElement>(null);
     useGSAP(() => {
       const coverTl = gsap.timeline({
@@ -34,10 +35,10 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     })
    
   return (
-    <div ref={cardRef} className='projectCard relative p-5 h-fit border border-white'>
-        <div ref={coverRef}  className="absolute h-full w-full top-0 left-0 bg-black origin-top"/>
+    <a ref={cardRef} href={link} target="_blank" rel="noreferrer" className='projectCard relative p-5 h-fit border border-white'>
+        <div ref={coverRef}  className="absolute h-full w-full top-0 left-0 bg-black origin-top pointer-events-none"/>
       <img className="" src={imgUrl} alt={alt} {...props}/>
-    </div>
+    </a>
    
   );
 }

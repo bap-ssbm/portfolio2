@@ -14,11 +14,13 @@ const content = {
     projectList: [
         {
             title: 'oshimoto.net',
-            src: '/projects/oshimotonet.png'
+            src: '/projects/oshimotonet.png',
+            link: 'https://www.oshimoto.net/'
         },
         {
             title: 'seta-tei.net',
-            src: '/projects/seta-tei.png'
+            src: '/projects/seta-tei.png',
+            link: 'https://www.seta-tei.jp/'
         }
     ]
 }
@@ -67,7 +69,7 @@ function Projects() {
          <div className='pc:flex gap-9 pc:mt-20 mt-10 brightness-75'>
             {
                 content.projectList.map((item) => (
-                    <ProjectsCard imgUrl={item.src} alt={item.title}/>
+                    <ProjectsCard link={item.link} imgUrl={item.src} alt={item.title}/>
                 ))
             }
          </div>
