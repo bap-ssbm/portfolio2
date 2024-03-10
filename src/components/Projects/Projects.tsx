@@ -41,7 +41,7 @@ function Projects() {
         scrollTrigger: {
               trigger: aboutWrapper,
               start: 'top bottom',
-              end: 'center bottom',
+              end: 'center-=50 bottom',
               scrub: 1,
             }
       })
@@ -63,6 +63,7 @@ function Projects() {
           <div className='line'/>
           <div className='w-full'>
           </div>
+          <img className='cornerFlower absolute pc:right-[-20px] right-[-10px] pc:bottom-[-30px] bottom-[-12px] z-10 pc:w-[200px] w-[100px]' src='/flowers/corner-flower-decoration.svg' alt='flower'/>
           <h2>
           <MaskText heading={content.title} className='pc:text-8xl text-2xl font-bold'/>
           </h2>

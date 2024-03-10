@@ -30,7 +30,7 @@ function App() {
   return (
     <div className='pc:fixed top-0 right-0 left-0 bottom-0 h-full w-full'>
       <Header/>
-      <div ref={containerRef} className='w-full pc:absolute'>
+      <div ref={containerRef} className='w-full pc:absolute overflow-hidden'>
         <Hero/>
         <Projects/>
         <About/>

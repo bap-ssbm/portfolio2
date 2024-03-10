@@ -63,3 +63,6 @@
     }
 }
 
+.section:has(.hero) {
+    padding: 0;
+}
