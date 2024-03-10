@@ -29,7 +29,7 @@ function About() {
       const lineTl = gsap.timeline({
         scrollTrigger: {
               trigger: aboutWrapper,
-              start: 'top bottom',
+              start: 'center bottom',
               end: 'center center',
               scrub: 1,
             }

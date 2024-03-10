@@ -21,7 +21,7 @@ function MaskText({heading, className, ...props} : Props) {
         scrollTrigger: {
           trigger: headingRef.current,
           start: 'bottom bottom',
-          end: 'center center-=30',
+          end: 'center center',
           scrub: .1,
         }
       })
