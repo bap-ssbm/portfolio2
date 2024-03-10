@@ -11,27 +11,36 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
 }
 
 function Heading({heading, className, ...props} : Props) {
-  gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
-    const dividerRef = useRef<HTMLDivElement>(null);
+  gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig);
+    const coverRef = useRef<HTMLDivElement>(null);
+    const baseRef = useRef<HTMLDivElement>(null);
+    const headingRef = useRef<HTMLHeadingElement>(null);
+
     useGSAP(() => {
-      const dividerTl = gsap.timeline({
+      const maskTl = gsap.timeline({
         scrollTrigger: {
-          trigger: dividerRef.current,
+          trigger: headingRef.current,
           start: 'bottom bottom',
-          end: 'bottom top',
+          end: 'top top',
           scrub: .1,
         }
-      });
-      dividerTl.to(dividerRef.current,{
-        rotate: 5,
-        ease: 'ease-in'
       })
+      maskTl.to(headingRef.current, {
+        '--text-mask': '100%',
+        ease: 'ease-in'
+      });
+        
     })
    
 
   return (
-   <h2 className={'heading pc:text-5xl text-2xl italic ' + className} {...props}>
-        {heading}
+   <h2  ref={headingRef} className={'heading pc:text-8xl text-2xl font-semibold w-fit' + className} {...props}>
+    <div ref={coverRef} className='heading__cover w-fit'>
+    {heading}
+    </div>
+    <div ref={baseRef} className='heading__base w-fit'>
+    {heading}
+    </div>
    </h2>
   );
 }

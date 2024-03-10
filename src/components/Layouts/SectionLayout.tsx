@@ -29,8 +29,8 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     // })
    
   return (
-    <div ref={sectionRef} className={bgClass + " relative"}>
-      <div className={' pc:min-h-[800px] relative z-20 pc:mb-[50px] pb-[100px] ' + className} {...props}>
+    <div ref={sectionRef} className={bgClass + " relative section"}>
+      <div className={' min-h-[800px] relative z-20 pc:mb-[50px] pb-[100px] ' + className} {...props}>
        {children}
        
     </div>

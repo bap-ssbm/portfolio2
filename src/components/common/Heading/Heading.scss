@@ -1,3 +1,24 @@
 .heading {
-    
-}
+    position: relative;
+  
+    --text-mask: 0%;
+    &__cover {
+      align-items: center;
+      display: flex;
+      height: fit-content;
+      position: relative;
+      clip-path: inset(0 calc(100% - var(--text-mask, 0%)) 0 0);
+    }
+  
+    &__base {
+      align-items: center;
+      display: flex;
+      height: fit-content;
+      left: 0;
+      opacity: .3;
+      position: absolute;
+      top: 0;
+    }
+  
+  }
+  
