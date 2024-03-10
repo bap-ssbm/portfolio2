@@ -2,6 +2,7 @@ import './App.scss';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Header from './components/common/Header/Header';
+import Footer from './components/common/Footer/Footer';
 
 
 function App() {
@@ -11,10 +12,7 @@ function App() {
       <Header/>
       <Hero/>
       <About/>
-
-      <div className='h-dvh'>
-
-</div>
+      <Footer/>
     </div>
   );
 }

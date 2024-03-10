@@ -6,6 +6,7 @@ import './About.scss'
 
 
 import SectionLayout from '../Layouts/SectionLayout';
+import Heading from '../common/Heading/Heading';
 
 const texts = {
     title: 'ABOUT ME',
@@ -51,9 +52,7 @@ function About() {
           <div className='w-full'>
 
           </div>
-          <h2 className='text-5xl italic text-center'>
-          {texts.title}
-          </h2>
+         <Heading heading='ABOUT ME'/>
           <p className='txt mt-7 pc:w-[50vw] text-center mx-auto'>
             {texts.txt}          
           </p>

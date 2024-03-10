@@ -13,11 +13,11 @@
         transition: 3s ease;
     }
     &:before {
-        top: 20%;
+        top: 60px;
         transform-origin: left;
     }
     &:after {
-        bottom: 20%;
+        bottom: 60px;
         transform-origin: right;
     }
 
