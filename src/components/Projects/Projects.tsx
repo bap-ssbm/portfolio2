@@ -41,7 +41,7 @@ function Projects() {
         scrollTrigger: {
               trigger: aboutWrapper,
               start: 'top bottom',
-              end: 'bottom center',
+              end: 'center bottom',
               scrub: 1,
             }
       })
