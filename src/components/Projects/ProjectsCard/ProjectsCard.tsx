@@ -35,7 +35,7 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     })
    
   return (
-    <a ref={cardRef} href={link} target="_blank" rel="noreferrer" className='projectCard relative p-5 h-fit border border-white'>
+    <a ref={cardRef} href={link} target="_blank" rel="noreferrer" className='projectCard relative p-5 h-fit border border-white inline-block'>
         <div ref={coverRef}  className="absolute h-full w-full top-0 left-0 bg-black origin-top pointer-events-none"/>
       <img className="" src={imgUrl} alt={alt} {...props}/>
     </a>
