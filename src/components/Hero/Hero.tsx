@@ -33,10 +33,11 @@ function Hero() {
                     const numFromCenter = index - lettersArr.length/2
                     const child = letter.querySelector("span")
                     gsap.from(child, {
+                        y:'-100%',
                         opacity: 0,
-                        duration: 2,
+                        duration: .5,
                         scale: 1,
-                        delay: index / 20
+                        delay: index % 5 / 8
                     })
                     const letterTl = gsap.timeline({
                         scrollTrigger: {
@@ -85,7 +86,7 @@ function Hero() {
                 <SeperateText text={texts.title}/>
                 </p>
             </div>
-            <img  className='flowers pc:w-40 w-20 brightness-0 mx-auto mt-5' src='/flowers/wedding-flowers-design.svg' alt='flowers'/>
+            {/* <img  className='flowers pc:w-40 w-20 brightness-0 mx-auto mt-5' src='/flowers/wedding-flowers-design.svg' alt='flowers'/> */}
         </div>
     </SectionLayout>
   );
