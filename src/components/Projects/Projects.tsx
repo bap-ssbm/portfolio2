@@ -45,7 +45,8 @@ function Projects() {
       })
         lineTl.from(line, {
           scale: 0,
-          ease: 'ease-in'
+          ease: 'ease-in',
+          duration: 1
         })
     })
   })
@@ -61,7 +62,7 @@ function Projects() {
           <div className='w-full'>
           </div>
          <Heading heading={content.title}/>
-         <div className='pc:flex gap-9 pc:mt-20 mt-10'>
+         <div className='pc:flex gap-9 pc:mt-20 mt-10 brightness-75'>
             {
                 content.projectList.map((item) => (
                     <ProjectsCard imgUrl={item.src} alt={item.title}/>
