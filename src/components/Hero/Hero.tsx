@@ -63,12 +63,11 @@ function Hero() {
         
     })
     useEffect(()=> {
-        window.addEventListener('load', () => {
-            if(document.querySelector('.hero')) {
-              document.querySelector('.hero')?.classList.add('is-animate');
-            }
-          });  
-       
+          if (document.readyState === "complete") {
+            document.querySelector('.hero')?.classList.add('is-animate');
+          } else {
+            document.querySelector('.hero')?.classList.add('is-animate');
+          }
     }, [])
 
    
