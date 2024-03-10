@@ -30,7 +30,7 @@ function About() {
         scrollTrigger: {
               trigger: aboutWrapper,
               start: 'top bottom',
-              end: 'center bottom',
+              end: 'center center',
               scrub: 1,
             }
       })
