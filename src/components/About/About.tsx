@@ -53,7 +53,7 @@ function About() {
 
           </div>
           <h2>
-          <MaskText heading={texts.title} className='pc:text-9xl text-2xl font-bold'/>
+          <MaskText heading={texts.title} className='pc:text-9xl text-3xl font-bold'/>
           </h2>
           <p className='pc:text-8xl text-2xl  mt-7 '>
             <span className='opacity-40'>Born and raised in </span>
