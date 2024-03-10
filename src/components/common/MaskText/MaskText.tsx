@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
-import './Heading.scss'
+import './MaskText.scss'
 
 
 
@@ -10,7 +10,7 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
     heading: string,
 }
 
-function Heading({heading, className, ...props} : Props) {
+function MaskText({heading, className, ...props} : Props) {
   gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig);
     const coverRef = useRef<HTMLDivElement>(null);
     const baseRef = useRef<HTMLDivElement>(null);
@@ -21,7 +21,7 @@ function Heading({heading, className, ...props} : Props) {
         scrollTrigger: {
           trigger: headingRef.current,
           start: 'bottom bottom',
-          end: 'top top',
+          end: 'center center-=30',
           scrub: .1,
         }
       })
@@ -34,15 +34,15 @@ function Heading({heading, className, ...props} : Props) {
    
 
   return (
-   <h2  ref={headingRef} className={'heading pc:text-8xl text-2xl font-semibold w-fit' + className} {...props}>
-    <div ref={coverRef} className='heading__cover w-fit'>
+   <span  ref={headingRef} className={'maskText w-fit ' + className} {...props}>
+    <div ref={coverRef} className='maskText__cover w-fit'>
     {heading}
     </div>
-    <div ref={baseRef} className='heading__base w-fit'>
+    <div ref={baseRef} className='maskText__base w-fit '>
     {heading}
     </div>
-   </h2>
+   </span>
   );
 }
 
-export default Heading;
+export default MaskText;

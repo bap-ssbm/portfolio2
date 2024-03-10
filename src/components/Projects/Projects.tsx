@@ -6,7 +6,7 @@ import './Projects.scss'
 
 
 import SectionLayout from '../Layouts/SectionLayout';
-import Heading from '../common/Heading/Heading';
+import MaskText from '../common/MaskText/MaskText';
 import ProjectsCard from './ProjectsCard/ProjectsCard';
 
 const content = {
@@ -61,7 +61,9 @@ function Projects() {
           <div className='line'/>
           <div className='w-full'>
           </div>
-         <Heading heading={content.title}/>
+          <h2>
+          <MaskText heading={content.title} className='pc:text-8xl text-2xl font-bold'/>
+          </h2>
          <div className='pc:flex gap-9 pc:mt-20 mt-10 brightness-75'>
             {
                 content.projectList.map((item) => (

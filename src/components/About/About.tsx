@@ -6,7 +6,7 @@ import './About.scss'
 
 
 import SectionLayout from '../Layouts/SectionLayout';
-import Heading from '../common/Heading/Heading';
+import MaskText from '../common/MaskText/MaskText';
 
 const texts = {
     title: 'ABOUT ME',
@@ -52,9 +52,18 @@ function About() {
           <div className='w-full'>
 
           </div>
-         <Heading heading={texts.title}/>
-          <p className='txt mt-7 pc:w-[50vw]'>
-            {texts.txt}          
+          <h2>
+          <MaskText heading={texts.title} className='pc:text-9xl text-2xl font-bold'/>
+          </h2>
+          <p className='pc:text-8xl text-2xl  mt-7 '>
+            <span className='opacity-40'>Born and raised in </span>
+            <MaskText heading='America,' className='pc:text-8xl text-2xl font-semibold'/>
+            <span className='opacity-40'> now living in </span>
+            <MaskText heading='Tokyo, Japan.' className='pc:text-8xl text-2xl font-semibold'/><br/>
+            <span className='opacity-40'> Currently working as a</span>
+            <MaskText heading='Front-end Developer' className='pc:text-8xl text-2xl font-semibold'/> 
+            <span className='opacity-40'> at a Japanese </span>
+            <MaskText heading='startup company.' className='pc:text-8xl text-2xl font-semibold'/> 
           </p>
         </div>
     </SectionLayout>
