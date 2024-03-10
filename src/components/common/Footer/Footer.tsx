@@ -22,7 +22,7 @@ const iconList = [
     },
     {
         name: 'linkedIn',
-        src: 'linkedin.svg',
+        src: 'linkedIn.svg',
         url: 'https://www.linkedin.com/in/kentaro-oshimoto/'
     }
 ]
