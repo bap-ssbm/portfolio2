@@ -7,6 +7,7 @@ import Projects from './components/Projects/Projects';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import gsap from 'gsap';
+import Cursor from './components/common/Cursor/Cursor';
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -36,6 +37,7 @@ function App() {
         <About/>
         <Footer/>
       </div>
+      <Cursor/>
     </div>
     
   );
