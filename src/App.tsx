@@ -12,11 +12,10 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   
   useGSAP(()=> {
-    const height = containerRef.current?.clientHeight;//コンテンツの高さを取得
-  document.body.style.height = `${height}px`
+    const height = containerRef.current?.clientHeight;
   if(height) {
     gsap.to(containerRef.current, {
-      y: -(height - document.documentElement.clientHeight),//ページ内要素の高さ - ウインドウの高さ
+      y: -(height - document.documentElement.clientHeight),
       ease: 'none',
       scrollTrigger: {
         trigger: document.body,
@@ -28,9 +27,9 @@ function App() {
   }  
   })
   return (
-    <div className='fixed top-0 right-0 left-0 bottom-0 h-full w-full'>
+    <div className='fixed overflow-hidden top-0 right-0 left-0 bottom-0 h-full w-full'>
       <Header/>
-      <div ref={containerRef} className='overflow-hidden absolute'>
+      <div ref={containerRef} className='w-full absolute pb-10'>
         <Hero/>
         <Projects/>
         <About/>
