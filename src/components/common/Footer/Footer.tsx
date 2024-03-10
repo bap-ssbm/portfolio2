@@ -29,7 +29,7 @@ const iconList = [
 function Footer() {
    
   return (
-   <footer className='footer bg-black w-screen py-10 pc:pt-[200px] pt-[50px]'>
+   <footer className='footer bg-black w-screen pc:py-[200px] py-[50px]'>
     <div className='footer__inner pt-20'>
     <div className='flex gap-10 justify-center items-center'>
         {
