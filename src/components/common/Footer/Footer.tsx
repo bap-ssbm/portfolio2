@@ -44,8 +44,6 @@ function Footer() {
         <img id='footerFlower' className='flower pc:w-[200px] w-[100px] brightness-100 ' src='/flowers/wedding-flowers-design.svg' alt='flower'/>
     </div>
     </div>
- 
-       
    </footer>
   );
 }

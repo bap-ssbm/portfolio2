@@ -3,7 +3,10 @@
 }
 
 .wrapper {
-    padding: 5vw;
+    padding: 30px;
+    @media (min-width: 768px ) {
+        padding: 5vw;
+    }
 }
 
 .txt {

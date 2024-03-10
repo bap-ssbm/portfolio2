@@ -38,13 +38,11 @@
             transform:scaleY(var(--scale));
         }
     }
-}
-
-
-.wrapper {
+    .wrapper {
  
 
-    @media (min-width:786px) {
-        min-height: 800px;
+        @media (min-width:786px) {
+            min-height: 800px;
+        }
     }
 }

@@ -7,11 +7,20 @@ import './Projects.scss'
 
 import SectionLayout from '../Layouts/SectionLayout';
 import Heading from '../common/Heading/Heading';
+import ProjectsCard from './ProjectsCard/ProjectsCard';
 
-const texts = {
+const content = {
     title: 'PROJECTS',
-    txt: "Born and raised in America,\nnow living in Tokyo, Japan.\n\nI love creative hobbies like dancing, and drawing.\nI also love playing video games on my pc =)!\n\nCurrently working at a Japanese startup company.",
-    nameja: '押本健太郎'
+    projectList: [
+        {
+            title: 'oshimoto.net',
+            src: '/projects/oshimotonet.png'
+        },
+        {
+            title: 'seta-tei.net',
+            src: '/projects/seta-tei.png'
+        }
+    ]
 }
 
 
@@ -50,9 +59,15 @@ function Projects() {
           <div className='line'/>
           <div className='line'/>
           <div className='w-full'>
-
           </div>
-         <Heading heading={texts.title}/>
+         <Heading heading={content.title}/>
+         <div className='pc:flex gap-9 pc:mt-20 mt-10'>
+            {
+                content.projectList.map((item) => (
+                    <ProjectsCard imgUrl={item.src} alt={item.title}/>
+                ))
+            }
+         </div>
         </div>
     </SectionLayout>
   );
