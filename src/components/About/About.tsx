@@ -43,7 +43,7 @@ function About() {
    
    
   return (
-    <SectionLayout  bgClass='bg-slate-500'  className='z-0 aboutSect relative pc:pt-[300px] pt-[100px] text-white' >
+    <SectionLayout  bgClass='bg-slate-100'  className='z-0 aboutSect relative pc:pt-[300px] pt-[100px] text-black' >
         <div className='wrapper relative'>
           <div className='line'/>
           <div className='line'/>

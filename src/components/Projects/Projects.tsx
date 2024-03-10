@@ -19,10 +19,10 @@ function Projects() {
  
   gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
   useGSAP(()=>{
-    const aboutSect = document.querySelector('.projectsSect');
+    const projectsSect = document.querySelector('.projectsSect');
 
-    const aboutWrapper = aboutSect?.querySelector('.wrapper');
-    const linesArr = aboutSect?.querySelectorAll('.line');
+    const aboutWrapper = projectsSect?.querySelector('.wrapper');
+    const linesArr = projectsSect?.querySelectorAll('.line');
   
     
     linesArr?.forEach(line => {
