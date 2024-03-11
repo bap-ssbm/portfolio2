@@ -47,7 +47,10 @@ function Cursor({className, ...props} : Props) {
    
 
   return (
-  <div ref={cursorRef} style={{ transform: `translate3d(${mouseX}px, ${mouseY}px, 0) ${hovered? 'scale(5)' : ''}` }} id='cursor' className='cursor pointer-events-none w-3 h-3 rounded-full relative z-50 bg-black invert pc:inline-block hidden'>
+  <div ref={cursorRef} style={{ transform: `translate3d(${mouseX}px, ${mouseY}px, 0)`}} id='cursor' className='cursor pointer-events-none w-3 h-3 rounded-full relative z-50 bg-black invert pc:inline-blockhidden flex items-center justify-center'>
+     {hovered&&<p className='relative z-50 text-white text-sm mix-blend-difference text-center ease-in duration-100'>押</p>}
+    <div style={{ transform: `${hovered? 'scale(5)' : ''}` }}  className='curso__inner w-full h-full rounded-full invert bg-back absolute top-0 left-0 bg-white ease-in-out duration-300 text-sm'>   
+    </div>
   </div>
   );
 }
