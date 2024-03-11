@@ -7,7 +7,7 @@
     &__cover {
       height: fit-content;
       position: relative;
-      clip-path: inset(0 calc(100% - var(--text-mask, 0%)) 0 0);
+      clip-path: inset(calc(100% - var(--text-mask, 0%)) 0 0 0);
     }
   
     &__base {
