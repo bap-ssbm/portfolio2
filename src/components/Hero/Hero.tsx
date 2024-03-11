@@ -20,8 +20,11 @@ function Hero() {
     const heroWrap = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
-        const textArr = document.querySelectorAll('.seperateText');
-        textArr.forEach(elm => {
+        const hero = document.querySelector('.hero');
+        const textArr = hero?.querySelectorAll('.seperateText');
+  
+        if(textArr)textArr.forEach(elm => {
+           
             const textBlockArr = elm.querySelectorAll('.seperateText__block');
           
          

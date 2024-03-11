@@ -3,14 +3,16 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import './MaskText.scss'
+import SeperateText from '../SeperateText';
 
 
 
 interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     heading: string,
+    seperate?: boolean
 }
 
-function MaskText({heading, className, ...props} : Props) {
+function MaskText({heading, seperate, className, ...props} : Props) {
   gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig);
     const coverRef = useRef<HTMLDivElement>(null);
     const baseRef = useRef<HTMLDivElement>(null);
@@ -36,10 +38,10 @@ function MaskText({heading, className, ...props} : Props) {
   return (
    <span  ref={headingRef} className={'maskText w-fit ' + className} {...props}>
     <span ref={coverRef} className='maskText__cover w-fit inline-block'>
-    {heading}
+    {seperate?<SeperateText text={heading}/>:heading}
     </span>
     <span ref={baseRef} className='maskText__base w-fit inline-block'>
-    {heading}
+    {seperate?<SeperateText text={heading}/>:heading}
     </span>
    </span>
   );

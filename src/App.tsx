@@ -13,11 +13,17 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   
   useGSAP(()=> {
-    const height = containerRef.current?.clientHeight;//コンテンツの高さを取得
-  document.body.style.height = `${height}px`
+    const height = containerRef.current?.clientHeight;
+  const setBodyHeight = () => {
+    document.body.style.height = `${height}px`;
+  };
+  setBodyHeight(); // Initial set
+  window.addEventListener('load', setBodyHeight);
+  window.addEventListener('resize', setBodyHeight); 
+ 
   if(height && window.innerWidth>=768) {
     gsap.to(containerRef.current, {
-      y: -(height - document.documentElement.clientHeight + 300),//ページ内要素の高さ - ウインドウの高さ
+      y: -(height - document.documentElement.clientHeight + 300),
       ease: 'none',
       scrollTrigger: {
         trigger: document.body,

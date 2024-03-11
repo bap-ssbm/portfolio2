@@ -52,7 +52,7 @@ function About() {
           </div>
           <img className='cornerFlower brightness-0 scale-x-[-1] absolute pc:left-[-20px] left-[-10px] pc:bottom-[-30px] bottom-[-12px] z-10 pc:w-[200px] w-[100px]' src='/flowers/corner-flower-decoration.svg' alt='flower' width='200' height='153'/>
           <h2>
-          <MaskText heading={texts.title} className='pc:text-9xl text-3xl font-bold'/>
+          <MaskText seperate={true} heading={texts.title} className='pc:text-9xl text-3xl font-bold'/>
           </h2>
           <p className='pc:text-8xl text-2xl  mt-7 '>
             <span className='opacity-40'>Born and raised in </span>

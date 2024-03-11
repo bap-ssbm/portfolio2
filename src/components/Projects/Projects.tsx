@@ -64,7 +64,7 @@ function Projects() {
           </div>
           <img className='cornerFlower absolute pc:right-[-20px] right-[-10px] pc:bottom-[-30px] bottom-[-12px] z-10 pc:w-[200px] w-[100px]' src='/flowers/corner-flower-decoration.svg' alt='flower' width='200' height='153'/>
           <h2>
-          <MaskText heading={content.title} className='pc:text-8xl text-2xl font-bold'/>
+          <MaskText seperate heading={content.title} className='pc:text-8xl text-2xl font-bold'/>
           </h2>
          <div className='pc:flex gap-9 pc:mt-20 mt-10 brightness-75'>
             {

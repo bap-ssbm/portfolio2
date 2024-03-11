@@ -25,7 +25,7 @@ const iconList = [
 function Footer() {
    
   return (
-   <footer className='footer bg-black w-screen h-fit pc:py-[150px] pt-[50px] pc:pb-[100px] pb-[120px]'>
+   <footer className='footer bg-black w-screen h-fit pc:py-[150px] pt-[50px] pc:pb-[50px] pb-[120px]'>
     <div className='footer__inner pt-20'>
     <div className='flex gap-10 justify-center items-center'>
         {
