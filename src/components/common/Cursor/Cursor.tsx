@@ -10,7 +10,6 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
 
 function Cursor({className, ...props} : Props) {
     const cursorRef = useRef<HTMLDivElement>(null);
-    const hoverContainer = document.querySelectorAll('a'); 
     const [hovered, setHovered] = useState(false);
     const [mouseY, setMouseY] = useState(0);
     const [mouseX, setMouseX] = useState(0);

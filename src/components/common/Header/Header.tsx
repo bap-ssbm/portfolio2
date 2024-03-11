@@ -1,13 +1,10 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
 import { useEffect, useRef, useState } from 'react';
-
 
 type Props = {
    
 }
-
 function Header() {
     const [rotation, setRotation] = useState(0);
     const [scrolling, setScrolling] = useState(false);
@@ -50,7 +47,7 @@ function Header() {
   return (
    <nav ref={navRef} className={'nav w-screen fixed left-0 top-0 z-50 pc:h-[70px] h-[50px] pc:pl-5 pl-3 duration-300 ' + whiteFilter}>
     <h1 className='nav__logo italic text-black flex gap-4 items-center h-full'>
-    <img ref={flowerRef} style={{ transform: `rotate(${rotation}deg)` }} id='mainflower' className='flower pc:w-10 w-8 brightness-0' src='/flowers/flower-with-6-petals.svg' alt='flower'/>
+    <img ref={flowerRef} style={{ transform: `rotate(${rotation}deg)` }} id='mainflower' className='flower pc:w-10 w-8 brightness-0' src='/flowers/flower-with-6-petals.svg' alt='flower' width='57' height='57'/>
         K.O
     </h1>
    </nav>

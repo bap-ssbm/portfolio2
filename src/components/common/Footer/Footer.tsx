@@ -1,7 +1,3 @@
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
-import { useEffect, useRef, useState } from 'react';
 import './Footer.scss';
 
 
@@ -35,13 +31,13 @@ function Footer() {
         {
             iconList.map((elm) => (
                     <a href={elm.url} rel="noreferrer" target='_blank' className='footer__link w-fit invert brightness-100'>
-                        <img id={elm.name} className='pc:w-[30px] w-[20px] ' src={'/icons/' + elm.src} alt={elm.name} />
+                        <img id={elm.name} className='pc:w-[30px] w-[20px]' width='30' height='30' src={'/icons/' + elm.src} alt={elm.name} />
                     </a>
             ))
         }
     </div>
     <div className='mx-auto w-fit pc:mt-[100px] mt-10'>
-        <img id='footerFlower' className='flower pc:w-[200px] w-[100px] brightness-100 ' src='/flowers/wedding-flowers-design.svg' alt='flower'/>
+        <img id='footerFlower' className='flower pc:w-[200px] w-[100px] brightness-100 ' src='/flowers/wedding-flowers-design.svg' alt='flower' width='200' height='82'/>
     </div>
     </div>
    </footer>

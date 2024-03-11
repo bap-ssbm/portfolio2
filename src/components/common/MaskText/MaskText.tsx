@@ -35,12 +35,12 @@ function MaskText({heading, className, ...props} : Props) {
 
   return (
    <span  ref={headingRef} className={'maskText w-fit ' + className} {...props}>
-    <div ref={coverRef} className='maskText__cover w-fit'>
+    <span ref={coverRef} className='maskText__cover w-fit inline-block'>
     {heading}
-    </div>
-    <div ref={baseRef} className='maskText__base w-fit '>
+    </span>
+    <span ref={baseRef} className='maskText__base w-fit inline-block'>
     {heading}
-    </div>
+    </span>
    </span>
   );
 }

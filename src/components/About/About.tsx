@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -51,7 +50,7 @@ function About() {
           <div className='line'/>
           <div className='w-full'>
           </div>
-          <img className='cornerFlower brightness-0 scale-x-[-1] absolute pc:left-[-20px] left-[-10px] pc:bottom-[-30px] bottom-[-12px] z-10 pc:w-[200px] w-[100px]' src='/flowers/corner-flower-decoration.svg' alt='flower'/>
+          <img className='cornerFlower brightness-0 scale-x-[-1] absolute pc:left-[-20px] left-[-10px] pc:bottom-[-30px] bottom-[-12px] z-10 pc:w-[200px] w-[100px]' src='/flowers/corner-flower-decoration.svg' alt='flower' width='200' height='153'/>
           <h2>
           <MaskText heading={texts.title} className='pc:text-9xl text-3xl font-bold'/>
           </h2>
