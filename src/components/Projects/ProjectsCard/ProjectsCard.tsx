@@ -22,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
       const coverTl = gsap.timeline({
         scrollTrigger: {
           trigger: cardRef.current,
-          start: 'bottom bottom',
+          start: 'center bottom',
           end: 'center center',
           scrub: .5
         }
