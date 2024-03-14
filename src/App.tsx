@@ -4,47 +4,19 @@ import About from './components/About/About';
 import Header from './components/common/Header/Header';
 import Footer from './components/common/Footer/Footer';
 import Projects from './components/Projects/Projects';
-import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
-import gsap from 'gsap';
 import Cursor from './components/common/Cursor/Cursor';
+import ReactLenis from '@studio-freight/react-lenis';
 
 function App() {
-  const containerRef = useRef<HTMLDivElement>(null);
   
-  useGSAP(()=> {
-    const height = containerRef.current?.clientHeight;
-  const setBodyHeight = () => {
-    document.body.style.height = `${height}px`;
-  };
-  setBodyHeight(); // Initial set
-  window.addEventListener('load', setBodyHeight);
-  window.addEventListener('resize', setBodyHeight); 
- 
-  if(height && window.innerWidth>=768) {
-    gsap.to(containerRef.current, {
-      y: -(height - document.documentElement.clientHeight + 300),
-      ease: 'none',
-      scrollTrigger: {
-        trigger: document.body,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1,
-      },
-    });
-  }  
-  })
   return (
-    <div className='pc:fixed top-0 right-0 left-0 bottom-0 h-full w-full'>
+    <ReactLenis root>
       <Header/>
-      <div ref={containerRef} className='w-full pc:absolute overflow-hidden'>
         <Hero/>
         <Projects/>
         <About/>
         <Footer/>
-      </div>
-      <Cursor/>
-    </div>
+    </ReactLenis>
     
   );
 }

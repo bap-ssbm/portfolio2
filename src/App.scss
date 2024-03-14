@@ -2,9 +2,14 @@
     background-color: #000;
  
 
-    @media (min-width: 768px ) {
-        cursor: none;
-    }
+ 
+}
+body {
+    overflow: hidden;
+}
+
+#root {
+    overflow: hidden;
 }
 
 .section {

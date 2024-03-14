@@ -11,10 +11,12 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElem
 function Cursor({className, ...props} : Props) {
     const cursorRef = useRef<HTMLDivElement>(null);
     const [hovered, setHovered] = useState(false);
+    const [outOfScreen, setoutOfScreen] = useState<boolean>(false);
     const [mouseY, setMouseY] = useState(0);
     const [mouseX, setMouseX] = useState(0);
   
     useEffect(() => {
+       
         const positionElement = (e: MouseEvent) => {
             setMouseY(e.clientY);
             setMouseX(e.clientX);
@@ -35,6 +37,12 @@ function Cursor({className, ...props} : Props) {
         window.addEventListener('mousemove', positionElement);
         document.body.addEventListener('mouseover', e => hoverHandler(e));
         document.body.addEventListener('mouseout', e => unhoverHandler(e));
+        document.documentElement.addEventListener('mouseleave', () => {
+           setoutOfScreen(true);
+        });
+        document.documentElement.addEventListener('mouseenter', () => {
+            setoutOfScreen(false);
+        });  
 
         return () => {
             window.removeEventListener('mousemove', positionElement);
@@ -46,7 +54,7 @@ function Cursor({className, ...props} : Props) {
    
 
   return (
-  <div ref={cursorRef} style={{ transform: `translate3d(${mouseX}px, ${mouseY}px, 0)`}} id='cursor' className='cursor pointer-events-none w-3 h-3 rounded-full relative z-50 bg-black invert pc:inline-blockhidden pc:flex items-center justify-center hidden'>
+  <div ref={cursorRef} style={{ transform: `translate3d(${mouseX}px, ${mouseY}px, 0)`, display: outOfScreen?'none':'inline-block'}} id='cursor' className='cursor pointer-events-none w-3 h-3 rounded-full relative z-50 bg-black invert pc:inline-blockhidden pc:flex items-center justify-center hidden'>
      {hovered&&<p className='relative z-50 text-white text-sm mix-blend-difference text-center ease-in duration-100'>押</p>}
     <div style={{ transform: `${hovered? 'scale(5)' : ''}` }}  className='curso__inner w-full h-full rounded-full invert bg-back absolute top-0 left-0 bg-white ease-in-out duration-300 text-sm'>   
     </div>
