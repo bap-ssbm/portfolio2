@@ -66,7 +66,7 @@ function Projects() {
           <h2>
           <MaskText seperate heading={content.title} className='pc:text-8xl text-2xl font-bold'/>
           </h2>
-         <div className='pc:flex gap-9 pc:mt-20 mt-10 brightness-75'>
+         <div className='pc:flex gap-9 pc:mt-20 mt-10'>
             {
                 content.projectList.map((item) => (
                     <ProjectsCard link={item.link} imgUrl={item.src} alt={item.title}/>

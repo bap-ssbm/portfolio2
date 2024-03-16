@@ -1,33 +1,33 @@
 .hero {
     position: relative;    
 
-    &:after, &:before {
-        background-color: #000000;
+    // &:after, &:before {
+    //     background-color: #fff;
  
-        transform: scale(0);
-        content: '';
-        height: 1px;
-        width: 100vw;
-        position: absolute;
-        transition: 3s ease;
-    }
-    &:before {
-        top: 50px;
+    //     transform: scale(0);
+    //     content: '';
+    //     height: 1px;
+    //     width: 100vw;
+    //     position: absolute;
+    //     transition: 3s ease;
+    // }
+    // &:before {
+    //     top: 50px;
       
-        transform-origin: left;
+    //     transform-origin: left;
 
-        @media (min-width: 768px ) {
-            top: 70px;
-        }
-    }
-    &:after {
-        bottom: 50px;
-        transform-origin: right;
+    //     @media (min-width: 768px ) {
+    //         top: 70px;
+    //     }
+    // }
+    // &:after {
+    //     bottom: 50px;
+    //     transform-origin: right;
 
-        @media (min-width: 768px ) {
-            bottom: 70px;
-        }
-    }
+    //     @media (min-width: 768px ) {
+    //         bottom: 70px;
+    //     }
+    // }
 
     &__ttl {
         transition: 3s ease;
@@ -46,8 +46,9 @@
         }
 
         .flowers {
-            transform: translateY(0);
+
             opacity: 1;
+            // animation: rotation 5s normal;
         }
     }
 
@@ -56,12 +57,21 @@
     }
 
     .flowers {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(10px);
-        transition: 2s ease-in;
     }
 }
 
 .section:has(.hero) {
     padding: 0;
+}
+
+@keyframes rotation {
+    0% { 
+        transform:rotate(0deg); 
+    } 
+    100% { 
+        transform:rotate(360deg); 
+        transform:rotate(calc(360deg * 1)); 
+    } 
 }

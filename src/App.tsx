@@ -4,50 +4,22 @@ import About from './components/About/About';
 import Header from './components/common/Header/Header';
 import Footer from './components/common/Footer/Footer';
 import Projects from './components/Projects/Projects';
-import Cursor from './components/common/Cursor/Cursor';
-import ReactLenis from '@studio-freight/react-lenis';
-import { useEffect, useState } from 'react';
+import PageLayout from './components/Layouts/PageLayout';
 
-function getWindowWidth() {
-  const { innerWidth: width } = window;
-  return width;
-}
+
 
 function App() {
-  const [windowWidth, setWindowWidth] = useState(getWindowWidth());
 
-  useEffect(() => {
-    function handleResize() {
-      setWindowWidth(getWindowWidth());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
 
   return (
-    <>
-    {(windowWidth>768)?
-      (<ReactLenis root >
-      <Header/>
+    <PageLayout>
+        <Header/>
         <Hero/>
-        <Projects/>
         <About/>
-        <Footer/>
-    </ReactLenis>):
-      (<div>
-      <Header/>
-        <Hero/>
         <Projects/>
-        <About/>
         <Footer/>
-    </div>)
-    }
-    
-    </>
-    
-    
+    </PageLayout>
   );
 }
 
