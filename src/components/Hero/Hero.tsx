@@ -20,6 +20,7 @@ function Hero() {
     gsap.registerPlugin(ScrollTrigger as gsap.GSAPConfig)
     const nameEn = useRef<HTMLDivElement>(null);
     const heroWrap = useRef<HTMLDivElement>(null);
+    const flowerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
         const hero = document.querySelector('.hero');
@@ -38,10 +39,10 @@ function Hero() {
                     const numFromCenter = index - lettersArr.length/2
                     const child = letter.querySelector("span")
                     gsap.from(child, {
-                        y:'100%',
+       
                         opacity: 0,
                         duration: .5,
-                        delay: index % 5 / 8 ,
+                        delay: index / 7 +.3,
                         ease: ''
                     })
                     const letterTl = gsap.timeline({
@@ -52,15 +53,36 @@ function Hero() {
                             scrub: .3,
                         }
                       })
-                    letterTl.to(letter,{
+                     
+                    letterTl.fromTo(letter,{
+                        y: (-3 *  Math.abs( (numFromCenter % 3) ) )  ,
+                        rotate: .2 * numFromCenter,
+                        opacity: 1  ,
+                        ease: "easeIn"
+                    },{
                         y: (-200 *  Math.abs( (numFromCenter % 3) ) ) - 200 ,
                         rotate: 10 * numFromCenter,
                         opacity: 0,
                         ease: "easeIn"
                     })
+                    
                 })
                 
             })    
+            const flowerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: heroWrap.current,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: .3,
+                }
+              })
+            flowerTl.to(flowerRef.current,{
+                y: -100 ,
+                rotate: 100,
+                opacity: 0,
+                ease: "easeIn"
+            })
         })
         
     })
@@ -76,12 +98,11 @@ function Hero() {
   return (
     <SectionLayout bgClass='bg-black     ' ref={heroWrap} className='hero relative h-screen' >
         <div className='title text-white text-center absolute h-full top-[50%] left-0 w-full translate-y-[-50%]'>
-            <h2 ref={nameEn} className='name1 absolute top-[50%] left-[50%] translate-x-[-50%] w-full text-center translate-y-[-50%] whitespace-nowrap font-bold pc:text-7xl text-3xl tracking-wider'>
+            <h2 ref={nameEn} className='name1 italic absolute top-[50%] left-[50%] translate-x-[-50%] w-full text-center translate-y-[-50%] whitespace-nowrap font-normal pc:text-7xl text-3xl tracking-wider'>
                         <SeperateText breakSP={true} text={texts.firstName}/>
                         <SeperateText breakSP={true} text={texts.lastName}/>
             </h2>
-            <div className='imgWrapper w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-                   
+            <div ref={flowerRef} className='imgWrapper w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
                     <div  className='flowers w-screen pc:max-w-[1000px] pc:min-w-[500px] brightness-200 mx-auto invert'>
                         <FlowerSvg/>
                     </div>
