@@ -55,7 +55,7 @@ function Hero() {
                       })
                      
                     letterTl.fromTo(letter,{
-                        y: (-3 *  Math.abs( (numFromCenter % 3) ) )  ,
+                        y: (-8 *  Math.abs( (numFromCenter % 3) )  + '%')  ,
                         rotate: .2 * numFromCenter,
                         opacity: 1  ,
                         ease: "easeIn"
@@ -78,7 +78,6 @@ function Hero() {
                 }
               })
             flowerTl.to(flowerRef.current,{
-                y: -100 ,
                 rotate: 100,
                 opacity: 0,
                 ease: "easeIn"
@@ -100,10 +99,13 @@ function Hero() {
         <div className='title text-white text-center absolute h-full top-[50%] left-0 w-full translate-y-[-50%]'>
             <h2 ref={nameEn} className='name1 italic absolute top-[50%] left-[50%] translate-x-[-50%] w-full text-center translate-y-[-50%] whitespace-nowrap font-normal pc:text-7xl text-3xl tracking-wider'>
                         <SeperateText breakSP={true} text={texts.firstName}/>
-                        <SeperateText breakSP={true} text={texts.lastName}/>
+                        <SeperateText breakSP={true} text={texts.lastName}/> 
+                        <div className='block pc:text-3xl text-sm relative'>
+                            <SeperateText breakSP={true} text={texts.title}/>
+                        </div>
             </h2>
-            <div ref={flowerRef} className='imgWrapper w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
-                    <div  className='flowers w-screen pc:max-w-[1000px] pc:min-w-[500px] brightness-200 mx-auto invert'>
+            <div  className='imgWrapper w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
+                    <div  ref={flowerRef} className='flowers w-screen pc:max-w-[1000px] pc:min-w-[500px] brightness-200 mx-auto invert'>
                         <FlowerSvg/>
                     </div>
             </div>
