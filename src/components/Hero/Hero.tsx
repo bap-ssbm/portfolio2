@@ -96,7 +96,7 @@ function Hero() {
 
    
   return (
-    <SectionLayout bgClass='bg-black     ' ref={heroWrap} className='hero relative h-screen' >
+    <SectionLayout bgClass='bg-black     ' ref={heroWrap} className='hero relative h-svh' >
         <div className='title text-white text-center absolute h-full top-[50%] left-0 w-full translate-y-[-50%]'>
             <h2 ref={nameEn} className='name1 italic absolute top-[50%] left-[50%] translate-x-[-50%] w-full text-center translate-y-[-50%] whitespace-nowrap font-normal pc:text-7xl text-3xl tracking-wider'>
                         <SeperateText breakSP={true} text={texts.firstName}/>
